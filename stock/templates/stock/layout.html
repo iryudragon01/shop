@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+{% load static%}
 <html>
     <head>
-        <title></title>
+        <title>my layout</title>
+        <link rel="stylesheet" href="{%static 'stock/main.css'%}" type="text/css"  >
     </head>
     <body>
-        
+        {%block content%}{%endblock content%}
+
     </body>
 </html>

@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-welcome to index
+{% extends "stock/layout.html"%}
+{%block content%}
+<h1>Welcome to index</h1>
 
 {{latest_all_list.1}}
     {% if latest_all_list %}
@@ -18,5 +13,4 @@ welcome to index
         <p>No polls are available.</p>
 
     {% endif %}
-</body>
-</html>
+{%endblock content%}
