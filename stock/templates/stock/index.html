@@ -1,16 +1,25 @@
 {% extends "stock/layout.html"%}
 {%block content%}
-<h1>Welcome to index</h1>
+{% for item in latest_all_list %}
+    {%if item.fillup %}
+    <table>
+            <tr>
+                <th>วันที่</th>
+                <th>{{item.name}}</th>
+                <th>จำนวน</th>
+            </tr>
+                
+                {% for subitem in item.fillup %}
+                <tr>
+                <th>{{subitem.date}}</th>
+                <th></th>
+                <th>{{subitem.volume}}</th></tr>
+                {% endfor %}
+                
+            
 
-{{latest_all_list.1}}
-    {% if latest_all_list %}
-        <ul>
-        {% for item in latest_all_list.1 %}
-            <li><a href="hello">{{ item.item}}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No polls are available.</p>
-
-    {% endif %}
+    </table>
+    <br/><br/>
+    {%endif%}
+{% endfor %}
 {%endblock content%}

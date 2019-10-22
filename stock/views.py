@@ -9,11 +9,17 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_all_list'
 
     def get_queryset(self):
-        item = Item.objects.all()
-        topup = Top_up.objects.all()
-        all = [item, topup]
-
-        return all
+        # all = [Item.objects.all(), Top_up.objects.all()]
+        itemlist=Item.objects.all()
+        myall=[]
+        for index in itemlist:
+            item={
+                'name':index.name,
+                'fillup':Top_up.objects.filter(item__pk=index.id)
+                }
+            myall.append(item)
+        return myall 
+        # return all
 
 
 class TopupView(generic.CreateView):

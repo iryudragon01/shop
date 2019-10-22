@@ -2,10 +2,14 @@
 {% load static%}
 <html>
     <head>
-        <title>my layout</title>
+        <title>shop
+            {%if title%}
+            -{{title}}
+            {%endif%}
+        </title>
         <link rel="stylesheet" href="{%static 'stock/main.css'%}" type="text/css"  >
     </head>
-    <body>
+    <body bgcolor="pink" >
         {%block content%}{%endblock content%}
 
     </body>
