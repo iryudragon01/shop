@@ -20,3 +20,9 @@ class Top_up(models.Model):
 
     def get_absolute_url(self):
         return reverse('stock:detail', kwargs={'pk': self.id})
+
+class Last_update(models.Model):
+    item=models.ForeignKey(Item,on_delete=models.CASCADE)
+    version = models.PositiveIntegerField() # index by version
+    Last_stock=models.PositiveIntegerField()
+    date=models.DateTimeField(auto_now=True)
