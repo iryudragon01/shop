@@ -26,3 +26,9 @@ class Top_up(models.Model): #fillup
 
     def get_absolute_url(self):
         return reverse('stock:detail', kwargs={'pk': self.id})
+
+    def __str__(self):
+        return self.item.name
+    
+class Display_Item(models.Model):
+    name = models.CharField(max_length=120)
