@@ -1,4 +1,4 @@
-from stock.models import Item,Top_up
+from stock.models import Item,Top_up,Last_update
 class Model2List():
     def ListItem(self):        
         itemlist=Item.objects.all()
@@ -10,3 +10,8 @@ class Model2List():
                 }
             myall.append(item)
         return myall    
+
+    def Logsheet(self,logdictionary,version):
+        for item in logdictionary:
+            newlastupdate=Last_update(item=item,version=version,Last_stock=logdictionary[item])
+            newlastupdate.save()
