@@ -6,3 +6,6 @@ li,table{
     background-color: rgb(235, 223, 225);
     border-block-color: pink;
 }
+.table-fillup{
+    font-size: 35px;
+}
