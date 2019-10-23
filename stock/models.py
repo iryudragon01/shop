@@ -32,3 +32,8 @@ class Top_up(models.Model): #fillup
     
 class Display_Item(models.Model):
     name = models.CharField(max_length=120)
+    first = models.PositiveIntegerField()
+    latest = models.PositiveIntegerField()
+    price_tag = models.PositiveIntegerField()
+    price_volume = models.PositiveIntegerField()
+    sum_volume =models.PositiveIntegerField()
