@@ -1,0 +1,29 @@
+{% extends "stock/layout.html"%}
+{%block content%}
+logsheet table </br>
+<table>
+
+{% for sheet in logsheet%}
+<tr>
+<th> {{sheet.item.name}}</th>
+<th>{{sheet.date_log}}</th>
+<th>{{sheet.Last_stock}}
+</tr>
+{%endfor%}
+</table>
+
+<br>Top up table
+<table>
+
+{% for topup in fillup%}
+<tr>
+<th> {{topup.item.name}}</th>
+<th>{{topup.date_fillup}}</th>
+<th>{{topup.volume}}
+</tr>
+{%endfor%}
+</table>
+
+
+
+{%endblock content%}

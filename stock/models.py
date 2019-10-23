@@ -11,18 +11,18 @@ class Item(models.Model):
     def __unicode__(self):
         return self.name
 
-
-class Top_up(models.Model):
-    item = models.ForeignKey(Item, on_delete=models.CASCADE)
-    volume = models.PositiveIntegerField()
-    worker = models.CharField(max_length=200)
-    date = models.DateTimeField(auto_now=True)
-
-    def get_absolute_url(self):
-        return reverse('stock:detail', kwargs={'pk': self.id})
-
-class Last_update(models.Model):
+class Last_update(models.Model):   #logsheet
     item=models.ForeignKey(Item,on_delete=models.CASCADE)
     version = models.PositiveIntegerField() # index by version
     Last_stock=models.PositiveIntegerField()
-    date=models.DateTimeField(auto_now=True)
+    date_log=models.DateTimeField(auto_now=True)
+
+
+class Top_up(models.Model): #fillup
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    volume = models.PositiveIntegerField()
+    worker = models.CharField(max_length=200)
+    date_fillup = models.DateTimeField(auto_now=True)
+
+    def get_absolute_url(self):
+        return reverse('stock:detail', kwargs={'pk': self.id})
