@@ -31,9 +31,12 @@ class Top_up(models.Model): #fillup
         return self.item.name
     
 class Display_Item(models.Model):
-    name = models.CharField(max_length=120)
+    item=models.ForeignKey(Item,on_delete=models.CASCADE)
     first = models.PositiveIntegerField()
     latest = models.PositiveIntegerField()
-    price_tag = models.PositiveIntegerField()
+    price_tag=models.PositiveIntegerField()
     price_volume = models.PositiveIntegerField()
     sum_volume =models.PositiveIntegerField()
+    version = models.PositiveIntegerField()
+
+

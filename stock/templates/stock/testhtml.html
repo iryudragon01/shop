@@ -1,0 +1,31 @@
+{% extends "stock/layout.html"%}
+{%block content%}
+<table>
+    {%for cell in displaydict %}
+    <tr>
+        <th>
+            {{cell.item.name}}
+        </th>
+        <th>
+            {{cell.first}}
+        </th>
+        <th>
+            {{cell.last}}
+        </th>
+        <th>
+            {{cell.item.price}}
+        </th>
+        <th>
+            {{cell.price_volume}}
+        </th>
+        <th>
+            {{cell.sum_volume}
+        </th>
+
+
+    </tr>
+
+    {%endfor%}
+</table>
+
+{%endblock%}

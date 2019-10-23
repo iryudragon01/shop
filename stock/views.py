@@ -1,19 +1,20 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Item, Top_up,Last_update
+from .models import Item, Top_up,Last_update,Display_Item
 from .iryu.listing import Model2List
 from django.template.response import TemplateResponse
 
 
 # Create your views here.
 def IndexView(request,*args,**kwargs):
-    # alllist=Model2List.ListItem(Model2List)
     alllist=Model2List.getlogsheet(Model2List,2)
     return TemplateResponse(request,'stock/method_index.html',alllist)
 
 
 
+def DisplayView(request):
 
+    return templateResponse(request,'stock/testhtml.html',{})
 
 
 

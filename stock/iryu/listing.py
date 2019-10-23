@@ -1,4 +1,4 @@
-from stock.models import Item,Top_up,Last_update
+from stock.models import Item,Top_up,Last_update,Display_Item
 from django.utils import timezone
 class Model2List():
     def ListItem(self):        
@@ -22,3 +22,8 @@ class Model2List():
             'fillup':fillup
         }
         return alldata
+    def write2Display(self):
+        allitem=Item.objects.all()
+        for item in allitem:
+            newitem=Display_Item(item=item,first=99,latest=150,price_tag=item.price,version=1)
+            newitem.save()
