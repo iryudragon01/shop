@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01e3cff6-9557-4dcb-900f-88ea4830f741" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stock/iryu/TopupManage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/templates/stock/topup/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/templates/stock/topup/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/iryu/TopupManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/TopupManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/templates/stock/topup/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/topup/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571914492756</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="topup notfinish yet">
+      <created>1571927186860</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571927186860</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +102,7 @@
     <MESSAGE value="upload from pycharm" />
     <MESSAGE value="Display Item not finish yet" />
     <MESSAGE value="Item pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item pages" />
+    <MESSAGE value="topup notfinish yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="topup notfinish yet" />
   </component>
 </project>

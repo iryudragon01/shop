@@ -6,5 +6,27 @@
 </head>
 <body>
 topup list
+
+<table width="40%">
+    <tr>
+        <th>วันที่</th>
+        {% for name in names %}
+        <th>{{name}}</th>
+
+        {% endfor %}
+
+    </tr>
+
+{% for items,datetime in objects %}
+<tr>
+    <th>{{datetime}}</th>
+    {% for item in items %}
+    <th> {{item.volume}}</th>
+    {% endfor %}
+</tr>
+{% endfor %}
+
+
+</table>
 </body>
 </html>

@@ -18,3 +18,29 @@ class Topupwork:
             for item in allitem:
                 newitem=Top_up(item=item,volume=request.POST.get(item.name),worker=request.POST.get('worker'),date_log=currenttime)
                 newitem.save()
+
+    def list(self):
+        if Top_up.objects.all().count() >0:
+            allitem=Top_up.objects.all()
+            count=Item.objects.filter(type=3).count()
+            date_log=[]
+            name=[]
+            contentlist=[]
+            for index in range(count+1):
+                listitem=allitem[index*count:index*count+count]
+                contentlist.append(listitem)
+                date_log.append(allitem[index*count].date_log)
+
+            for loop in range(count):
+                name.append(allitem[loop].item.name)
+
+
+            objects=zip(contentlist,date_log)
+            content= {'objects': objects,
+                      'count':count,
+                      'names':name
+                      }
+
+            return content
+
+

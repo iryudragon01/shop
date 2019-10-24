@@ -50,7 +50,7 @@ def TopupCreateView(request):
     return render(request,'stock/topup/create.html',content)
 
 def TopupListView(request):
-    content={}
+    content=Topupwork.list(Topupwork)
     return render(request,'stock/topup/list.html',content)
 
 
