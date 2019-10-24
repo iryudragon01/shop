@@ -11,5 +11,9 @@ urlpatterns=[
     ##### Item management
     path('itemcreate/',views.ItemCreateView,name='itemcreate'),
     path('itemlist/',views.ItemListView,name='itemlist'),
-    path('itemedit/<int:pk>/',views.ItemEditView,name='itemedit')
+    path('itemedit/<int:pk>/',views.ItemEditView,name='itemedit'),
+    ####  topup management
+    path('topupcreate/',views.TopupCreateView,name='topupcreate'),
+    path('topuplist/',views.TopupListView,name='topuplist')
+
 ]

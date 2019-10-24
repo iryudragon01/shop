@@ -4,6 +4,7 @@ from .models import Item, Top_up,Last_update,Display_Item
 from .iryu.listing import Model2List
 from django.template.response import TemplateResponse
 from .iryu.ItemManage import Manage
+from .iryu.TopupManage import Topupwork
 
 
 # Create your views here.
@@ -38,8 +39,19 @@ def ItemEditView(request,pk=None):
             Manage.saveedititem(Manage,pk,request)
             return ItemListView(request)
         return render(request,'stock/Item/Edit.html',content)
+########end Item page
+######## topup page
 
+def TopupCreateView(request):
+    content=Topupwork.getfooditem(Topupwork)
+    if request.method=='POST':
+        Topupwork.create(Topupwork,request)
+        return TopupListView(request)
+    return render(request,'stock/topup/create.html',content)
 
+def TopupListView(request):
+    content={}
+    return render(request,'stock/topup/list.html',content)
 
 
 
