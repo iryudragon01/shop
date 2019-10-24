@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01e3cff6-9557-4dcb-900f-88ea4830f741" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stock/templates/stock/testhtml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/iryu/ItemManage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/templates/stock/Item/Edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/templates/stock/Item/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/templates/stock/Item/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/iryu/listing.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/listing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/static/stock/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/stock/static/stock/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/views.py" afterDir="false" />
     </list>
@@ -16,11 +20,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SXfIFJsBYxc09yVKSt6yRiyg3g" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../venv" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -55,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571828512667</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Display Item not finish yet">
+      <created>1571842557710</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571842557710</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -63,7 +82,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -71,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upload from pycharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload from pycharm" />
+    <MESSAGE value="Display Item not finish yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display Item not finish yet" />
   </component>
 </project>

@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.views import generic
 from .models import Item, Top_up,Last_update,Display_Item
 from .iryu.listing import Model2List
 from django.template.response import TemplateResponse
+from .iryu.ItemManage import Manage
 
 
 # Create your views here.
@@ -15,6 +16,30 @@ def IndexView(request,*args,**kwargs):
 def DisplayView(request):
 
     return templateResponse(request,'stock/testhtml.html',{})
+
+
+#########Item management
+def ItemCreateView(request):
+    content={}
+    if request.method=='POST':
+        makenewitem=Manage.creteitem(Manage,request)
+        content['createnewitem']=makenewitem
+
+    return render(request,'stock/Item/create.html',content)
+
+def ItemListView(request):
+    content=Manage.getitemlist(Manage)
+    return render(request,'stock/Item/list.html',content)
+
+def ItemEditView(request,pk=None):
+    if pk is not None:
+        content=Manage.loaditem(Manage,pk)
+        if request.method=='POST':
+            Manage.saveedititem(Manage,pk,request)
+            return ItemListView(request)
+        return render(request,'stock/Item/Edit.html',content)
+
+
 
 
 
