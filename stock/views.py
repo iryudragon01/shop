@@ -8,7 +8,7 @@ from .iryu.TopupManage import Topupwork
 
 
 # Create your views here.
-def IndexView(request,*args,**kwargs):
+def IndexView(request):
     alllist=Model2List.getlogsheet(Model2List,2)
     return TemplateResponse(request,'stock/method_index.html',alllist)
 
@@ -16,7 +16,7 @@ def IndexView(request,*args,**kwargs):
 
 def DisplayView(request):
 
-    return templateResponse(request,'stock/testhtml.html',{})
+    return render(request,'stock/testhtml.html',{})
 
 
 #########Item management
