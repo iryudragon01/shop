@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01e3cff6-9557-4dcb-900f-88ea4830f741" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/scripts/accounts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/iryu/TopupManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/TopupManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/iryu/listing.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/listing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/templates/stock/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/templates/stock/method_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/method_index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/templates/stock/topup/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/topup/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +39,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../venv" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python\shop\user\templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -82,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571927186860</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="topup part2">
+      <created>1571938523114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571938523114</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +125,17 @@
     <MESSAGE value="Display Item not finish yet" />
     <MESSAGE value="Item pages" />
     <MESSAGE value="topup notfinish yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="topup notfinish yet" />
+    <MESSAGE value="topup part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="topup part2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/user/urls.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

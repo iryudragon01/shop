@@ -1,32 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-topup list
-
-<table width="40%">
-    <tr>
-        <th>วันที่</th>
-        {% for name in names %}
-        <th>{{name}}</th>
-
+{% extends 'stock/layout.html'%}
+{% block content%}
+<div class="content-group"><h1>topup list</h1></div>
+<div class="container" width="40%">
+    <table width=40% class="table">
+        <thead>
+        <tr>
+            <th>วันที่</th>
+            {% for name in names %}
+            <th>{{name}}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for items,datetime in objects %}
+        <tr>
+            <th>{{datetime}}</th>
+            {% for item in items %}
+            <td> {{item.volume}}</td>
+            {% endfor %}
+        </tr>
         {% endfor %}
+        </tbody>
+    </table>
+</div>
 
-    </tr>
-
-{% for items,datetime in objects %}
-<tr>
-    <th>{{datetime}}</th>
-    {% for item in items %}
-    <th> {{item.volume}}</th>
-    {% endfor %}
-</tr>
-{% endfor %}
-
-
-</table>
-</body>
-</html>
+{% endblock%}

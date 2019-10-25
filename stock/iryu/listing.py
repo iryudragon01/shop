@@ -15,13 +15,18 @@ class Model2List():
             newlastupdate.save()
 
     def getlogsheet(self,version):
-        logsheet=Last_update.objects.filter(version=2)    #pull last stock for logsheet filter by version
-        fillup=Top_up.objects.filter(date_fillup__gt = logsheet[0].date_log) #pull fillup with date_fillup greater than logsheet
-        alldata={
-            'logsheet':logsheet,
-            'fillup':fillup
-        }
+        count=Last_update.objects.all().count()
+        if count !=0:
+            logsheet=Last_update.objects.filter(version=2)    #pull last stock for logsheet filter by version
+            fillup=Top_up.objects.filter(date_fillup__gt = logsheet[0].date_log) #pull fillup with date_fillup greater than logsheet
+            alldata={
+                'logsheet':logsheet,
+                'fillup':fillup
+            }
+        else:
+            alldata={}
         return alldata
+
     def write2Display(self):
         allitem=Item.objects.all()
         for item in allitem:

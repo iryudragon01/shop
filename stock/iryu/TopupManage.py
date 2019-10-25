@@ -34,7 +34,6 @@ class Topupwork:
             for loop in range(count):
                 name.append(allitem[loop].item.name)
 
-
             objects=zip(contentlist,date_log)
             content= {'objects': objects,
                       'count':count,
