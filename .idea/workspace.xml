@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01e3cff6-9557-4dcb-900f-88ea4830f741" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/templates/stock/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572005811367</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="login part2">
+      <created>1572009450496</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572009450496</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,7 +129,8 @@
     <MESSAGE value="topup notfinish yet" />
     <MESSAGE value="topup part2" />
     <MESSAGE value="user login" />
-    <option name="LAST_COMMIT_MESSAGE" value="user login" />
+    <MESSAGE value="login part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="login part2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
