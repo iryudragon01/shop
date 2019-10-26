@@ -1,25 +1,26 @@
 {% extends "stock/layout.html"%}
 {%block content%}
-{% for item in latest_all_list %}
-    {%if item.fillup %}
-    <table>
-            <tr>
-                <th>วันที่</th>
-                <th>{{item.name}}</th>
-                <th>จำนวน</th>
-            </tr>
-                
-                {% for subitem in item.fillup %}
-                <tr>
-                <th>{{subitem.date}}</th>
-                <th></th>
-                <th>{{subitem.volume}}</th></tr>
-                {% endfor %}
-                
-            
-
-    </table>
-    <br/><br/>
-    {%endif%}
+{{ user }} Welcome
+{% if items %}
+<table class="table">
+    <tr>
+        <th>name</th>
+        <th>first</th>
+        <th>last</th>
+        <th>price</th>
+        <th>sales</th>
+        <th>money</th>
+    </tr>
+{% for item_name,item_first,item_last,item_price,item_sale,item_money in items %}
+    <tr>
+        <th>{{item_name}}</th>
+        <td>{{item_first}}</td>
+        <td>{{item_last}}</td>
+        <td>{{ item_price }}</td>
+        <td>{{ item_sale }}</td>
+        <td>{{item_money }}</td>
+    </tr>
 {% endfor %}
+</table>
+{% endif %}
 {%endblock content%}

@@ -11,14 +11,26 @@ class Item(models.Model):
     def __unicode__(self):
         return self.name
 
-class Last_update(models.Model):   #logsheet
-    item=models.ForeignKey(Item,on_delete=models.CASCADE)
-    version = models.PositiveIntegerField() # index by version
-    Last_stock=models.PositiveIntegerField()
-    date_log=models.DateTimeField(auto_now=True)
+
+class Log_Sheet(models.Model):  # log sheet
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    version = models.PositiveIntegerField()  # index by version
+    Last_stock = models.PositiveIntegerField()
+    date_log = models.DateTimeField(auto_now=True)
+    # store start and and of other sheet for view history
+    start_log_version = models.PositiveIntegerField(default=0)
+    end_log_version = models.PositiveIntegerField(default=0)
+    start_temp_index = models.PositiveIntegerField(default=0)
+    end_temp_index = models.PositiveIntegerField(default=0)
+    start_top_up_index = models.PositiveIntegerField(default=0)
+    end_top_up_index = models.PositiveIntegerField(default=0)
+    start_income_index = models.PositiveIntegerField(default=0)
+    end_income_index = models.PositiveIntegerField(default=0)
+    start_expense_index = models.PositiveIntegerField(default=0)
+    end_expense_index = models.PositiveIntegerField(default=0)
 
 
-class Top_up(models.Model): #fillup
+class Top_up(models.Model):  # fill up
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
     volume = models.PositiveIntegerField()
     worker = models.CharField(max_length=200)
@@ -31,27 +43,22 @@ class Top_up(models.Model): #fillup
         return self.item.name
 
 
-
-
-
-
-
-
 class Incomelog(models.Model):
     name = models.CharField(max_length=200)
     volume = models.PositiveIntegerField()
     log_date = models.DateTimeField(auto_now=True)
+
 
 class Expenselog(models.Model):
     name = models.CharField(max_length=200)
     volume = models.PositiveIntegerField()
     log_date = models.DateTimeField(auto_now=True)
 
+
 class Tempexpense(models.Model):
     name = models.CharField(max_length=200)
     volume = models.PositiveIntegerField()
-    log_date =models.DateTimeField()
-
+    log_date = models.DateTimeField()
 
 
 #####Display models

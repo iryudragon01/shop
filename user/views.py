@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.utils import timezone
 from .models import User_Start_Date
+from stock.models import Log_Sheet
 
 
 # Create your views here.
@@ -17,7 +18,13 @@ def RegisterView(request):
             raw_password = form.cleaned_data.get('password1')
             account = authenticate(username=username, password=raw_password)
             login(request, account)
-            user_start_date=User_Start_Date(username=username,date_log=timezone.now())
+
+            # set up User start date
+            if Log_Sheet.objects.all().count() == 0:
+                log_sheet_version = 1
+            else:
+                log_sheet_version = Log_Sheet.objects.last().version_log
+            user_start_date=User_Start_Date(username=username,date_log=timezone.now(),version_log=log_sheet_version)
             user_start_date.save()
             return redirect('user:index')
         else:
