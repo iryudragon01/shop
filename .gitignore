@@ -1,3 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 .idea/
+venv
+/user/migrations/
+/stock/migrations/
+/stock/migrations/
