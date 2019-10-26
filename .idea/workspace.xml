@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01e3cff6-9557-4dcb-900f-88ea4830f741" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stock/iryu/display.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/iryu/listing.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/listing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/iryu/display.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/display.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/templates/stock/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/templates/stock/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572064784162</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="display getdisplay">
+      <created>1572085019130</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572085019130</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,7 +181,8 @@
     <MESSAGE value="try to push everything" />
     <MESSAGE value="try to push everything2" />
     <MESSAGE value="user start date models" />
-    <option name="LAST_COMMIT_MESSAGE" value="user start date models" />
+    <MESSAGE value="display getdisplay" />
+    <option name="LAST_COMMIT_MESSAGE" value="display getdisplay" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

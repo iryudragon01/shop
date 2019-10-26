@@ -28,6 +28,7 @@ class Display:
         items_price = []
         items_sale_volume = []
         items_money = []
+        items_sum = []
         all_top_up = Top_up.objects.filter(date_log__gt=user.date_log)
         # fill up start log sheet with top up.
         for top_up in all_top_up:
@@ -41,20 +42,25 @@ class Display:
             if log_sheet.item.type == 1:
                 items_first.append(log_sheet.Last_stock)
                 items_last.append(log_sheet_end.Last_stock)
-                items_sale_volume.append(log_sheet_end.Last_stock-log_sheet.Last_stock)
-                items_money.append(log_sheet.item.price*(log_sheet_end.Last_stock-log_sheet.Last_stock))
-            elif log_sheet.item.type ==2:
+                items_sale_volume.append(log_sheet_end.Last_stock - log_sheet.Last_stock)
+                items_money.append(log_sheet.item.price * (log_sheet_end.Last_stock - log_sheet.Last_stock))
+            elif log_sheet.item.type == 2:
                 items_first.append(0)
-                items_last.append(log_sheet_end.Last_stock-log_sheet.Last_stock)
-                items_sale_volume.append(log_sheet_end.Last_stock-log_sheet.Last_stock)
-                items_money.append(log_sheet.item.price*(log_sheet_end.Last_stock-log_sheet.Last_stock))
+                items_last.append(log_sheet_end.Last_stock - log_sheet.Last_stock)
+                items_sale_volume.append(log_sheet_end.Last_stock - log_sheet.Last_stock)
+                items_money.append(log_sheet.item.price * (log_sheet_end.Last_stock - log_sheet.Last_stock))
             else:
                 items_first.append(log_sheet.Last_stock)
                 items_last.append(log_sheet_end.Last_stock)
-                items_sale_volume.append(log_sheet.Last_stock-log_sheet_end.Last_stock)
-                items_money.append(log_sheet.item.price*(log_sheet.Last_stock-log_sheet_end.Last_stock))
+                items_sale_volume.append(log_sheet.Last_stock - log_sheet_end.Last_stock)
+                items_money.append(log_sheet.item.price * (log_sheet.Last_stock - log_sheet_end.Last_stock))
 
+            # sum items
+        sum_money = 0
+        for money in items_money:
+            sum_money += money
+            items_sum.append(sum_money)
 
-        items = zip(items_name, items_first, items_last,items_price,items_sale_volume,items_money)
+        items = zip(items_name, items_first, items_last, items_price, items_sale_volume, items_money,items_sum)
         content['items'] = items
         return content
