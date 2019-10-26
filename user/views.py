@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.utils import timezone
+from .models import User_Start_Date
 
 
 # Create your views here.
@@ -15,6 +17,8 @@ def RegisterView(request):
             raw_password = form.cleaned_data.get('password1')
             account = authenticate(username=username, password=raw_password)
             login(request, account)
+            user_start_date=User_Start_Date(username=username,date_log=timezone.now())
+            user_start_date.save()
             return redirect('user:index')
         else:
             content['registration_form'] = form
@@ -29,6 +33,9 @@ def RegisterView(request):
 
 
 def LoginView(request):
+    if request.user.is_authenticated :
+        return redirect('stock:index')  # if authenticated redirect to stock
+
     content = {}
     if request.POST:
         username = request.POST['username']
