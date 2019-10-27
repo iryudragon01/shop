@@ -4,7 +4,7 @@ from .models import Item, Top_up, Log_Sheet, Display_Item
 from .iryu.listing import Model2List
 from django.template.response import TemplateResponse
 from .iryu.ItemManage import Manage
-from .iryu.TopupManage import Topupwork
+from .iryu.Top_up_link import Top_up_work
 
 from .iryu.display import Display
 
@@ -59,16 +59,20 @@ def ItemEditView(request, pk=None):
 ######## topup page
 
 def TopupCreateView(request):
-    content = Topupwork.getfooditem(Topupwork)
+    content = Top_up_work.getfooditem(Top_up_work)
     if request.method == 'POST':
-        Topupwork.create(Topupwork, request)
+        Top_up_work.create(Top_up_work, request)
         return TopupListView(request)
     return render(request, 'stock/topup/create.html', content)
 
 
 def TopupListView(request):
-    content = Topupwork.list(Topupwork)
+    content = Top_up_work.list(Top_up_work)
     return render(request, 'stock/topup/list.html', content)
+
+def Add_top_up(request):
+    items=Item.objects.filter(type=3)
+    return render(request,'stock/topup/top_up.html',{'items':items})
 
 
 # view by class
@@ -88,11 +92,6 @@ def TopupListView(request):
 #         Model2List.Logsheet(Model2List,version=2,logdictionary=lastdict)
 #         return Model2List.ListItem(Model2List)
 
-
-class TopupView(generic.CreateView):
-    model = Top_up
-    fields = ['item', 'volume', 'worker']
-    template_name = 'stock/topup.html'
 
 
 class DetailtopupView(generic.DetailView):

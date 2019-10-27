@@ -4,7 +4,7 @@ app_name='stock'
 urlpatterns=[
     path('',views.IndexView,name='index'),
     path('test/',views.DisplayView,name='test'),
-    path('topup/',views.TopupView.as_view(),name='topup'),
+    path('topup/',views.Add_top_up,name='topup'),
     path('topup/<int:pk>/',views.DetailtopupView.as_view(),name='detail'),
 
 

@@ -2,6 +2,7 @@ from user.models import User_Start
 from stock.models import Item, Log_Sheet,Tempexpense,Top_up,Incomelog,Expenselog
 from django.utils import timezone
 from user.iryu.user_start_script import User_Start_Handle
+from stock.iryu.Top_up_link import Top_up_work
 
 
 class Display:
@@ -63,7 +64,9 @@ class Display:
             items_sum.append(sum_money)
 
         items = zip(items_name, items_first, items_last, items_price, items_sale_volume, items_money, items_sum)
+
         content['items'] = items
+        content['top_ups'] = Top_up_work.get_top_up(Top_up_work,request)
         return content
 
     #  End get display
