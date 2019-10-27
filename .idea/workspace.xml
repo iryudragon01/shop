@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01e3cff6-9557-4dcb-900f-88ea4830f741" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stock/templates/stock/index_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/templates/stock/index_sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/templates/stock/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/templates/stock/topup/top_up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/iryu/TopupManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/Top_up_link.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/iryu/display.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/iryu/display.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/templates/stock/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/templates/stock/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/templates/stock/topup/top_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/stock/templates/stock/topup/top_up.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572167848975</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="top up resign">
+      <created>1572184592420</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572184592420</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +196,8 @@
     <MESSAGE value="user start date models" />
     <MESSAGE value="display getdisplay" />
     <MESSAGE value="update user when post data" />
-    <option name="LAST_COMMIT_MESSAGE" value="update user when post data" />
+    <MESSAGE value="top up resign" />
+    <option name="LAST_COMMIT_MESSAGE" value="top up resign" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

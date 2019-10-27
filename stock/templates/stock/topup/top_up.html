@@ -1,17 +1,21 @@
 {% extends 'stock/layout.html' %}
 {% block content %}
-{% if top_ups %}
+{% if items %}
+<div>
 <form class="form" action="" method="post">
     {% csrf_token %}
-    {%for top_up in top_ups %}
-        <div class="content-group">
-            <label>{{top_up.item.name}}</label>
-            <input name="{{top_up.item.name}}" value="0" \>
+    <div class="form-group col">
+    {%for item in items %}
+        <div class="col-xs-2">
+            <label class="form-control-label">{{item.name}}</label>
+            <input class="form-control form-control-lg" name="{{item.name}}" value="0" \>
         </div>
     {% endfor %}
     <input type="submit" value="Top Up">
+    </div>
 
 </form>
+</div>
 
  resssssssssssssssssss
 {% endif %}
