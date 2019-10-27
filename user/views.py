@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.utils import timezone
-from .models import User_Start_Date
+from .models import User_Start
 from stock.models import Log_Sheet
+from user.iryu.user_start_script import User_Start_Handle
 
 
 # Create your views here.
@@ -23,9 +24,11 @@ def RegisterView(request):
             if Log_Sheet.objects.all().count() == 0:
                 log_sheet_version = 1
             else:
-                log_sheet_version = Log_Sheet.objects.last().version_log
-            user_start_date=User_Start_Date(username=username,date_log=timezone.now(),version_log=log_sheet_version)
-            user_start_date.save()
+                log_sheet_version = Log_Sheet.objects.last().version
+            new_user = User_Start(username=username, date_log=timezone.now(), version_log=log_sheet_version)
+            new_user.save()
+            update_user=User_Start.objects.get(username=username)
+            User_Start_Handle.edit_user_start(User_Start_Handle,update_user)
             return redirect('user:index')
         else:
             content['registration_form'] = form

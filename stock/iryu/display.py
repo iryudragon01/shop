@@ -1,6 +1,7 @@
-from user.models import User_Start_Date
-from stock.models import Item, Log_Sheet, Top_up
+from user.models import User_Start
+from stock.models import Item, Log_Sheet,Tempexpense,Top_up,Incomelog,Expenselog
 from django.utils import timezone
+from user.iryu.user_start_script import User_Start_Handle
 
 
 class Display:
@@ -19,7 +20,7 @@ class Display:
                                           end_log_version=1)
                 new_log_sheet.save()
         # retrieve data from log sheet
-        user = User_Start_Date.objects.get(username=request.user)
+        user = User_Start.objects.get(username=request.user)
         log_sheet_starts = Log_Sheet.objects.filter(version=user.version_log)
         log_sheet_ends = Log_Sheet.objects.filter(version=Log_Sheet.objects.last().version)
         items_name = []
@@ -61,6 +62,30 @@ class Display:
             sum_money += money
             items_sum.append(sum_money)
 
-        items = zip(items_name, items_first, items_last, items_price, items_sale_volume, items_money,items_sum)
+        items = zip(items_name, items_first, items_last, items_price, items_sale_volume, items_money, items_sum)
         content['items'] = items
         return content
+
+    #  End get display
+    # start set display
+    def setdisplay(self, request):
+        items = Item.objects.all()
+        log_sheet_last = Log_Sheet.objects.last()
+        current_time = timezone.now()
+        worker = User_Start.objects.get(username=request.user)
+        for item in items:
+            new_log_sheet = Log_Sheet(item=item,
+                                      version=log_sheet_last.version + 1,
+                                      Last_stock=request.POST.get(item.name),
+                                      date_log=current_time,
+                                      start_log_version=worker.version_log,
+                                      end_log_version=log_sheet_last.version)
+            new_log_sheet.save()
+
+        User_Start_Handle.user_superior(User_Start_Handle,request)    # update user start
+        return self.getdisplay(self, request)
+
+
+
+
+
