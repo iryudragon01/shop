@@ -23,7 +23,7 @@ class Top_up_work:
             top_ups = []
 
             date_logs.append('name')
-            date_logs.append('day')
+            date_logs.append(log_sheet[0].date_log)
             names = []
             log_sheet_first = []
             for item in items:
@@ -34,14 +34,11 @@ class Top_up_work:
             top_ups.append(names)
             top_ups.append(log_sheet_first)
 
-            print('all top up ', all_top_up.count())
             for index in range(int(all_top_up.count() / items.count())):
                 top_up = []
-                print('hello index ', index)
                 for loop in range(items.count()):
-                    top_up.append(all_top_up[index * items.count() + loop])
-                    print('iryu dragon')
-                    if loop == items.count() - 1:
+                    top_up.append(all_top_up[index * items.count() + loop].volume)
+                    if loop == items.count()-1:
                         print('hello')
                         date_logs.append(all_top_up[loop + items.count() * index].date_log)
                         top_ups.append(top_up)
@@ -56,7 +53,7 @@ class Top_up_work:
         current_time = timezone.now()
         for item in items:
             new_top_up = Top_up(item=item,
-                                voluem=request.POST.get(item.name),
+                                volume=request.POST.get(item.name),
                                 worker=request.user,
                                 date_log=current_time
                                 )

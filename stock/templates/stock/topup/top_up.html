@@ -1,14 +1,18 @@
 {% extends 'stock/layout.html' %}
 {% block content %}
 {% if items %}
-<div>
+<main role="main" class="container">
+            <div class="row">
+              <div class="col-md-3">
+
 <form class="form" action="" method="post">
     {% csrf_token %}
-    <div class="form-group col">
+    <div class="form-group row">
     {%for item in items %}
-        <div class="col-xs-2">
+        <div class="form-group">
             <label class="form-control-label">{{item.name}}</label>
-            <input class="form-control form-control-lg" name="{{item.name}}" value="0" \>
+            <input class="form-control form-control-lg" type="number" name="{{item.name}}" value="0" \>
+            <br>
         </div>
     {% endfor %}
     <input type="submit" value="Top Up">
@@ -16,7 +20,9 @@
 
 </form>
 </div>
+            </div>
+</main>
 
- resssssssssssssssssss
 {% endif %}
 {% endblock %}
+k script %}

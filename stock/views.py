@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Item, Top_up, Log_Sheet, Display_Item
-from .iryu.listing import Model2List
-from django.template.response import TemplateResponse
 from .iryu.ItemManage import Manage
 from .iryu.Top_up_link import Top_up_work
 
@@ -72,6 +70,10 @@ def TopupListView(request):
 
 def Add_top_up(request):
     items=Item.objects.filter(type=3)
+    if request.POST:
+        Top_up_work.set_top_up(Top_up_work,request)
+        return redirect('stock:index')
+
     return render(request,'stock/topup/top_up.html',{'items':items})
 
 
