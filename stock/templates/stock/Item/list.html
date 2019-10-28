@@ -2,13 +2,14 @@
 {%block content%}
 <table width="40%">
     <tr>
-        <th>name</th><th>price</th><th>type</th><th></th>
+        <th>name</th><th>id</th><th>price</th><th>type</th><th></th>
     </tr>
 {% for item in items %}
     <tr><th>{{item.name}}</th>
-        <th>{{item.price}}</th>
-        <th>
-            {{item.type}}</th>
+        <td>{{item.id}}</td>
+        <td>{{item.price}}</td>
+        <td>
+            {{item.type}}</td>
         <th><a href="{% url 'stock:itemedit' item.id %}" >แก้ไข</a></th>
 
 
