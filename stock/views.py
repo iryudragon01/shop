@@ -24,23 +24,6 @@ def IndexView(request):
                 return render(request, 'stock/index.html', content)
 
 #########Item management
-def ItemCreateView(request):
-    content = {}
-    if request.method == 'POST':
-        makenewitem = Manage.creteitem(Manage, request)
-        content['createnewitem'] = makenewitem
-
-    return render(request, 'stock/Item/create.html', content)
-
-
-
-def ItemEditView(request, pk=None):
-    if pk is not None:
-        content = Manage.loaditem(Manage, pk)
-        if request.method == 'POST':
-            Manage.saveedititem(Manage, pk, request)
-            return redirect('stock:index')
-        return render(request, 'stock/Item/Edit.html', content)
 
 
 ########end Item page
